@@ -1,0 +1,12 @@
+[Unit]
+Description=Flask Application
+After=network.target
+
+[Service]
+User=your_username
+Group=www-data
+WorkingDirectory=/path/to/your/project
+ExecStart=/path/to/your/venv/bin/python /path/to/your/project/app.py
+
+[Install]
+WantedBy=multi-user.target
